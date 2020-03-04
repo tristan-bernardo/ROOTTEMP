@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title>Blank App</title>
+    <title>AR App</title>
     <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/jeromeetienne/AR.js/2.2.1/aframe/build/aframe-ar.js"></script>
 </head>
@@ -17,8 +17,8 @@
 
         </a-assets>
         <a-marker preset="hiro">
-            
-          
+
+
             <a-image src="#fire" position="1 -2 -1"></a-image>
             <a-entity gltf-model="#agave"></a-entity>
         </a-marker>
@@ -27,13 +27,14 @@
     <script type="text/javascript" src="cordova.js"></script>
     <script>
         var m = document.querySelector("a-maker")
-            m.addeventListener("markerFound"){
-                alert("found")
+        m.addeventListener("markerFound") {
+        alert("found")
         })
         m = document.querySelector("a-maker")
-           m.addeventListener("markerlost") {
-                alert("lost");
+        m.addeventListener("markerlost") {
+        alert("lost");
         })
+
     </script>
 
 </body>
