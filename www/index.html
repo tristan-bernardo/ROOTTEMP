@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Blank App</title>
+    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/jeromeetienne/AR.js/2.2.1/aframe/build/aframe-ar.js"></script>
+</head>
+
+<body style='margin : 0px; overflow: hidden;'>
+    <a-scene embedded arjs>
+        <a-assets>
+            <img id="fire" src="imgage/unnamed.jpg">
+            <a-asset-item id="#agave" src="imgage/Agave/model.gltf"></a-asset-item>
+
+        </a-assets>
+        <a-marker preset="hiro">
+            
+          
+            <a-image src="#fire" position="1 -2 -1"></a-image>
+            <a-entity gltf-model="#agave"></a-entity>
+        </a-marker>
+        <a-entity camera></a-entity>
+    </a-scene>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script>
+        var m = document.querySelector("a-maker")
+            m.addeventListener("markerFound"){
+                alert("found")
+        })
+        m = document.querySelector("a-maker")
+           m.addeventListener("markerlost") {
+                alert("lost");
+        })
+    </script>
+
+</body>
+
+</html>
